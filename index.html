@@ -1,136 +1,223 @@
-<DOCTYPE.HTML>
-<HTML.LANG="PT-BR">
-    <head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoPeças Central | Filtre por Montadora</title>
+    <title>Auto Peças do Paulão - As Melhores Peças para Seu Carro</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Ícones externos para o design -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <!-- Cabeçalho / Menu -->
-    <header class="header">
-        <div class="container navbar">
-            <div class="logo">Auto<span>Peças</span></div>
-            <nav class="menu">
-                <a href="#home">Início</a>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-gear fa-spin-slow"></i>
+                <h1>Auto Peças do <span>Paulão</span></h1>
+            </div>
+            <nav>
+                <a href="#produtos">Peças</a>
                 <a href="#marcas">Marcas</a>
-                <a href="#produtos">Produtos</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
+                <a href="#sobre">Sobre Nós</a>
             </nav>
+            <div class="cart-icon" onclick="toggleCarrinho()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
         </div>
     </header>
 
-    <!-- Página Inicial / Banner Principal -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>As Peças Certas para o Seu Carro</h1>
-            <p>Selecione a montadora abaixo ou navegue pelo nosso catálogo de destaques.</p>
-            <a href="#marcas" class="btn">Escolher por Marca</a>
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Peças Originais e Paralelas de Alta Qualidade</h2>
+            <p>Atendemos todas as marcas e modelos com o melhor preço da região.</p>
+            <a href="#produtos" class="btn-hero">Ver Catálogo</a>
         </div>
     </section>
 
-    <!-- Grupo de Separação para os Carros (Marcas) -->
-    <section id="marcas" class="marcas container">
-        <h2 class="section-title">Escolha a Marca do seu Carro</h2>
-        <div class="grid-marcas">
-            
-            <!-- Grupo Chevrolet -->
-            <a href="#produtos-chevrolet" class="card-marca">
-                <div class="marca-icon">🚗</div>
-                <h3>Chevrolet</h3>
-                <p>Onix, Celta, Cruze, S10...</p>
-            </a>
-
-            <!-- Grupo Fiat -->
-            <a href="#produtos-fiat" class="card-marca">
-                <div class="marca-icon">🚙</div>
-                <h3>Fiat</h3>
-                <p>Uno, Palio, Argo, Toro...</p>
-            </a>
-
-            <!-- Grupo Ford -->
-            <a href="#produtos-ford" class="card-marca">
-                <div class="marca-icon">🏎️</div>
-                <h3>Ford</h3>
-                <p>Ka, Fiesta, Focus, Ranger...</p>
-            </a>
-
-            <!-- Grupo Volkswagen -->
-            <a href="#produtos-vw" class="card-marca">
-                <div class="marca-icon">🚘</div>
-                <h3>Volkswagen</h3>
-                <p>Gol, Fox, Golf, Amarok...</p>
-            </a>
-
-        </div>
-    </section>
-
-    <!-- Seção de Produtos Separados -->
-    <section id="produtos" class="produtos container">
+    <!-- VITRINE DE PRODUTOS -->
+    <main id="produtos" class="container">
+        <h2 class="section-title">Nosso Catálogo de Peças</h2>
         
-        <!-- Bloco Chevrolet -->
-        <div id="produtos-chevrolet" class="grupo-categoria">
-            <h3 class="categoria-titulo">Peças para Linha Chevrolet</h3>
-            <div class="grid-produtos">
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
-                    <div class="card-body">
-                        <h4>Pastilha de Freio Onix</h4>
-                        <p class="preco">R$ 129,90</p>
-                        <a href="https://wa.me" target="_blank" class="btn-card">Chamar no WhatsApp</a>
+        <div class="products-grid">
+            
+            <!-- PRODUTO 1 -->
+            <div class="product-card" data-marca="volkswagen">
+                <div class="image-container">
+                    <!-- Foto da Peça -->
+                    <img src="https://unsplash.com" alt="Pastilha de Freio" class="product-img">
+                    <!-- Foto do Carro Aplicado (Miniatura) -->
+                    <div class="car-badge">
+                        <img src="https://unsplash.com" alt="VW Gol">
+                        <span>Aplica-se: VW Gol / Fox</span>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
-                    <div class="card-body">
-                        <h4>Filtro de Óleo Prisma/Celta</h4>
-                        <p class="preco">R$ 35,00</p>
-                        <a href="https://wa.me" target="_blank" class="btn-card">Chamar no WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bloco Fiat -->
-        <div id="produtos-fiat" class="grupo-categoria">
-            <h3 class="categoria-titulo">Peças para Linha Fiat</h3>
-            <div class="grid-produtos">
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
-                    <div class="card-body">
-                        <h4>Amortecedor Dianteiro Uno/Palio</h4>
-                        <p class="preco">R$ 299,00</p>
-                        <a href="https://wa.me" target="_blank" class="btn-card">Chamar no WhatsApp</a>
+                <div class="product-info">
+                    <span class="brand-tag">Volkswagen</span>
+                    <h3>Jogo de Pastilhas de Freio Dianteiro</h3>
+                    <p class="compatibility"><strong>Modelos:</strong> Gol G5/G6, Fox 1.0/1.6</p>
+                    <div class="price-area">
+                        <span class="price">R$ 89,90</span>
+                        <button class="btn-add" onclick="adicionarAoCarrinho('Jogo Pastilha Freio VW', 89.90)">
+                            <i class="fa-solid fa-plus"></i> Comprar
+                        </button>
                     </div>
                 </div>
             </div>
+
+            <!-- PRODUTO 2 -->
+            <div class="product-card" data-marca="chevrolet">
+                <div class="image-container">
+                    <img src="https://unsplash.com" alt="Amortecedor Dianteiro" class="product-img">
+                    <div class="car-badge">
+                        <img src="https://unsplash.com" alt="Chevrolet Onix">
+                        <span>Aplica-se: GM Onix / Prisma</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="brand-tag">Chevrolet</span>
+                    <h3>Par Amortecedor Dianteiro Cofap</h3>
+                    <p class="compatibility"><strong>Modelos:</strong> Onix e Prisma (2013 a 2019)</p>
+                    <div class="price-area">
+                        <span class="price">R$ 459,00</span>
+                        <button class="btn-add" onclick="adicionarAoCarrinho('Par Amortecedor GM Onix', 459.00)">
+                            <i class="fa-solid fa-plus"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTO 3 -->
+            <div class="product-card" data-marca="fiat">
+                <div class="image-container">
+                    <img src="https://unsplash.com" alt="Kit Correia Dentada" class="product-img">
+                    <div class="car-badge">
+                        <img src="https://unsplash.com" alt="Fiat Palio">
+                        <span>Aplica-se: Fiat Uno / Palio</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="brand-tag">Fiat</span>
+                    <h3>Kit Correia Dentada e Tensor Gates</h3>
+                    <p class="compatibility"><strong>Modelos:</strong> Uno, Palio, Siena Motor Fire 1.0/1.4</p>
+                    <div class="price-area">
+                        <span class="price">R$ 135,00</span>
+                        <button class="btn-add" onclick="adicionarAoCarrinho('Kit Correia Dentada Fiat Fire', 135.00)">
+                            <i class="fa-solid fa-plus"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTO 4 -->
+            <div class="product-card" data-marca="ford">
+                <div class="image-container">
+                    <img src="https://unsplash.com" alt="Filtro de Óleo" class="product-img">
+                    <div class="car-badge">
+                        <img src="https://unsplash.com" alt="Ford Fiesta">
+                        <span>Aplica-se: Ford Fiesta / Ka</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="brand-tag">Ford</span>
+                    <h3>Filtro de Óleo Motorcraft</h3>
+                    <p class="compatibility"><strong>Modelos:</strong> Fiesta, Ka, EcoSport Motor Zetec Rocam</p>
+                    <div class="price-area">
+                        <span class="price">R$ 29,90</span>
+                        <button class="btn-add" onclick="adicionarAoCarrinho('Filtro de Óleo Ford Zetec', 29.90)">
+                            <i class="fa-solid fa-plus"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ÁREA DO CARRINHO LATERAL (COMPRAS) -->
+    <div id="sidebar-cart" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart" onclick="toggleCarrinho()">&times;</button>
+        </div>
+        
+        <!-- Itens adicionados aparecem aqui -->
+        <div id="cart-items-container" class="cart-body">
+            <p class="empty-message">Seu carrinho está vazio.</p>
         </div>
 
-    </section>
-
-    <!-- Seção Sobre Nós -->
-    <section id="sobre" class="sobre">
-        <div class="container">
-            <h2>Quem Somos</h2>
-            <p>Especialistas em componentes automotivos estruturados por marcas. Facilitamos sua busca para que você encontre o componente exato para o modelo do seu veículo com segurança e rapidez.</p>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button class="btn-checkout" onclick="finalizarCompra()">Finalizar Compra</button>
         </div>
-    </section>
+    </div>
 
-    <!-- Seção de Contato -->
-    <section id="contato" class="contato container">
-        <h2 class="section-title">Fale Conosco</h2>
-        <div class="contato-info">
-            <p>📍 Endereço: Avenida Automotiva, 1000 - Centro</p>
-            <p>📞 Telefone / WhatsApp: (11) 99999-9999</p>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>&copy; 2026 AutoPeças Central. Todos os direitos reservados.</p>
+    <!-- RODAPÉ -->
+    <footer id="sobre">
+        <p>&copy; 2026 Auto Peças do Paulão. Todos os direitos reservados.</p>
+        <p>Av. das Nações Automotivas, nº 1000 - Centro</p>
     </footer>
 
-</body>
-</html>
+    <!-- INTERAÇÃO DO CARRINHO (JAVASCRIPT INDEPENDENTE) -->
+    <script>
+        let carrinho = [];
+
+        function toggleCarrinho() {
+            document.getElementById('sidebar-cart').classList.toggle('active');
+        }
+
+        function adicionarAoCarrinho(nome, preco) {
+            const itemExistente = carrinho.find(item => item.nome === nome);
+            if (itemExistente) {
+                itemExistente.qtd++;
+            } else {
+                carrinho.push({ nome, preco, qtd: 1 });
+            }
+            atualizarCarrinho();
+            // Abre o carrinho automaticamente ao adicionar item
+            document.getElementById('sidebar-cart').classList.add('active');
+        }
+
+        function removerDoCarrinho(nome) {
+            carrinho = carrinho.filter(item => item.nome !== nome);
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            const container = document.getElementById('cart-items-container');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total-value');
+            
+            container.innerHTML = '';
+            
+            if (carrinho.length === 0) {
+                container.innerHTML = '<p class="empty-message">Seu carrinho está vazio.</p>';
+                cartCount.innerText = '0';
+                cartTotal.innerText = 'R$ 0,00';
+                return;
+            }
+
+            let totalGeral = 0;
+            let totalItens = 0;
+
+            carrinho.forEach(item => {
+                totalGeral += item.preco * item.qtd;
+                totalItens += item.qtd;
+
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('cart-item');
+                itemDiv.innerHTML = `
+                    <div>
+                        <h4>${item.nome}</h4>
+                        <p>${item.qtd}x - R$ ${item.preco.toFixed(2)}</p>
+                    </div>
+                    <button onclick="removerDoCarrinho('${item.nome}')" class="btn-remove"><i class="fa-solid fa-trash"></i></button>
+                `;
+                container.appendChild(itemDiv);
+            });
